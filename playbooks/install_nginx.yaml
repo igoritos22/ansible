@@ -1,0 +1,32 @@
+---
+- hosts: webservers
+  become: yes
+  remote_user: erenadmin
+  tasks:
+  - name: Instalando NGINX
+    apt:
+      name: nginx
+      state: latest
+      update_cache: yes
+
+  - name: Habilitando o star do NGINX no boot
+    service:
+      name: nginx
+      state: started
+
+  - name: Copiando o index.html customizado
+    copy:
+      src: index.html
+      dest: /var/www/html/index.html
+
+  - name: Copiando o nginx.conf
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx/nginx.conf
+    notify: Restartando o nginx
+      
+  handlers:
+  - name: Restartando o nginx
+    service:
+      name: nginx
+      state: restarted
