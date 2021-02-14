@@ -1,7 +1,7 @@
 ---
 - hosts: webservers
   become: yes
-  remote_user: erenadmin
+  remote_user: root
   tasks:
   - name: Instalando NGINX
     apt:
@@ -15,8 +15,8 @@
       state: started
 
   - name: Copiando o index.html customizado
-    copy:
-      src: index.html
+    template:
+      src: index.html.j2
       dest: /var/www/html/index.html
 
   - name: Copiando o nginx.conf
