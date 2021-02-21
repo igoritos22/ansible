@@ -22,3 +22,15 @@
   user: root
   roles:
   - { role: join-workers, tags: ["join_workers_role"] }
+
+- hosts: k8s-master
+  become: yes
+  user: root
+  roles:
+  - { role: install_helm, tags: ["install_helm3_role"]}
+
+- hosts: k8s-master
+  become: yes
+  user: root
+  roles:
+  - { role: install_moni_tools, tags: ["install_moni_tools_role"]}

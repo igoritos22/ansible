@@ -1,0 +1,6 @@
+- hosts: k8s-master
+  become: yes
+  user: root
+  roles:
+  - { role: deploy_app, tags: ["deploy_app_role"] }
+
