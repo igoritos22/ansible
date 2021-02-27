@@ -21,4 +21,5 @@
     packages:
     - kubelet
     - kubeadm
-    - kubectl 
+    - kubectl
+  notify: Restart Kubelet 
