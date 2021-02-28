@@ -1,6 +1,6 @@
 #criacao do provider
 provider "azurerm" {
-  subscription_id = "2129a764-fdca-41c9-b27c-a35ef18705af"
+  subscription_id = var.id_sub
   features {}
 }
 
