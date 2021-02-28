@@ -22,7 +22,7 @@ output "ip_instances" {
 }
 
 resource "local_file" "inventory" {
-    filename = "./host.ini"
+    filename = "./host"
     content     = <<_EOF
     [k8s-master]
     ${module.az_virtual_machines.ips_internos[0]}
