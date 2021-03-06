@@ -1,6 +1,11 @@
 # Deploy k8s Cluster via Ansible & Terraform
 Esse reposítório contém um exemplo de um projeto onde foi construído um cluster Kubernetes através do Ansible e Terraform.
 
+## Topologia
+
+![plot](./projetok8s.pdf)
+
+
 ## Workflow de construção do Projeto
 As etapas de desenvolvimento do projeto são:
 - Construção da Infraestrutura: deploy das Vms que compõe o cluster
