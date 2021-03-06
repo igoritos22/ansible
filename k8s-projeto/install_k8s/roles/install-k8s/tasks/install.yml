@@ -6,7 +6,7 @@
 
 - name: Adicionando as chaves do repo apt k8s
   apt_key: 
-    url: {{ docker_key }}
+    url: "{{ docker_key }}"
     state: present
 
 - name: Adicionando o repo do K8s
