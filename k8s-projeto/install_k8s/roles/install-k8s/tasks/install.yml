@@ -2,11 +2,11 @@
 
 #Instalacao do docker
 - name: Instalando o docker
-  shell: curl -fsSL https://get.docker.com | bash
+  shell: curl -fsSL {{docker_url}} | bash
 
 - name: Adicionando as chaves do repo apt k8s
   apt_key: 
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    url: {{ docker_key }}
     state: present
 
 - name: Adicionando o repo do K8s

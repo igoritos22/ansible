@@ -1,2 +1,4 @@
 ---
 # vars file for install-k8s
+docker_url: https://get.docker.com
+docker_key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
