@@ -21,6 +21,8 @@ output "ip_instances" {
     value = module.az_virtual_machines.ips_internos
 }
 
+##plus
+
 resource "local_file" "inventory" {
     filename = "./host"
     content     = <<_EOF
@@ -30,5 +32,9 @@ resource "local_file" "inventory" {
     [k8s-workers]
     ${module.az_virtual_machines.ips_internos[1]}
     ${module.az_virtual_machines.ips_internos[2]}
+
+    [k8s-workers:vars]
+    K8S_MASTER_NODE_IP=${module.az_virtual_machines.ips_internos[0]}
+    K8S_API_SECURE_PORT=6443
     _EOF
 }
