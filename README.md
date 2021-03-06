@@ -3,7 +3,7 @@ Esse reposítório contém um exemplo de um projeto onde foi construído um clus
 
 ## Topologia
 
-![plot](./projetok8s.pdf)
+![plot](./projetok8s.png)
 
 
 ## Workflow de construção do Projeto
