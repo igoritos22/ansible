@@ -1,0 +1,8 @@
+---
+# vars file for deallocate
+
+rg_name: IAC_EXPERT-RG
+vm_names:
+  - iacnode1
+  - iacnode2
+  - iacnode3

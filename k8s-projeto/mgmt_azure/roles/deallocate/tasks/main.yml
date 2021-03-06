@@ -1,0 +1,9 @@
+---
+# tasks file for deallocate
+- name: 1. Deallocate vms do cluster
+  azure_rm_virtualmachine:
+    resource_group: "{{ rg_name }}"
+    name:
+      with_items: "{{ vm_names }}"
+    allocated: no
+  register: vms_deallocated 
