@@ -38,7 +38,7 @@ module "az_virtual_machines" {
 }
 ```
 ## Inventário Dinâmico
-Caso deseje gerar o inventário (hosts) de maneira automática instancie o seguinte bloco de recurso:
+Caso deseje gerar o inventário (hosts) de maneira automática instancie o resource "local_file" :
 ```bash
 resource "local_file" "inventory" {
     filename = "./hosts"
@@ -56,6 +56,8 @@ resource "local_file" "inventory" {
     _EOF
 }
 ```
+para mais detalhes consulte a documentação oficial [Hashicorp](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file)
+
 Uma vez instanciado, basta substituir passar o path do arquivo de hosts quando for rodar a playbook. 
 
 ## Enviado as chaves para os nodes gerenciados do Ansible
