@@ -134,3 +134,6 @@ Note que as instancias da versão 1 estão send encerradas enquanto instancias d
 
 ## Contribuidores:
 Esse projeto trata-se de um desafio do curso ministrado pelo Jefferson Fernando,  [@badtuxx](https://github.com/badtuxx). Aproveito para deixar meu agradecimento ao professor pelo desafio e curso.
+
+## TO DO
+Conhecer e testar o Ansible lint para melhorar o projeto!
